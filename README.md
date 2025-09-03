@@ -56,7 +56,8 @@ Aunque no es un requisito, para la pruebas se recomienda el uso de un contenedor
     ~~~
    conda activate etiquetado
     ~~~
-2. **Instalar dependencias necesarias** (instalar individualmente via pip dentro del entorno):  
+2. **Instalar dependencias necesarias** (instalar individualmente via pip dentro del entorno):
+  
    **pyside2** (para la interfaz gráfica, instalado via conda-forge):
     ~~~
    conda install -c conda-forge pyside2
