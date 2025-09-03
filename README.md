@@ -124,7 +124,7 @@ TFE/
 │   ├── Grabar_imagenes/      # Programa de grabación de imágenes
 │   ├── Resultados/           # Programa de inserción en la BBDD
 │   ├── Scripts/              # Herramientas auxiliares como la generación del dataset o el entrenamiento del modelo
-├── data/
+├── data/                # La estructura data se genera sola si no existe.
 │   ├── App/         
 │   ├── ├── Local/         
 │   ├── ├── ├── ordenes/        
