@@ -17,7 +17,7 @@ Los adecuados resultados obtenidos, con métricas (IoU=0,98) aunque preliminares
 3.	**Motor de la base de datos**: MySQL Community Server – GPL, versión 8.2.0
 Aunque no es un requisito, para la pruebas se recomienda el uso de un contenedor **Docker** por su sencillez.
 
-### Instalación del entorno principal
++ ### Instalación del entorno principal
 1. **Instalar Anaconda**  
    [Descargar Anaconda](https://www.anaconda.com/download)
 
