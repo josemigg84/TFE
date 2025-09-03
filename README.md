@@ -107,7 +107,7 @@ Aunque no es un requisito, para la pruebas se recomienda el uso de un contenedor
 
 ## 2. Estructura del proyecto
 El flujo principal de este proyecto se divide en 3 programas independientes, uno se encargar de comunicar con el PLC y las cámaras para capturar imágenes de las carrocerías. El segundo programa las analiza y genera el resultado. Por último, el tercer programa se encarga de insertar el resultado en la base de datos. Para implementar esta solución, la arquitectura propuesta se basa en un modelo de tuberías y filtros (pipes and filters), donde cada módulo se comporta como un filtro especializado y se conecta con los siguientes a través de colas FIFO con persistencia en disco. De esta forma, se desacoplan los procesos asegurando una mejor tolerancia a fallos si un proceso se detiene, los demás permanecen acumulando datos en la cola o esperando a recibirlos.
-![Arquitectura](docs/images/diagrama.png)
+![Arquitectura](TFG_Arquitectura.png)
 
 
 ## 3. Generación del dataset y entrenamiento
