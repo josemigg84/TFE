@@ -132,13 +132,13 @@ TFE/
 │   ├── ├── ├── ├── fifo_analizar_resultados_fallos/    # carpeta de ficheros JSON con fallo en la cola FIFO entre analizar y resultados
 │   ├── ├── ├── ├── fifo_grabar_analizar/               # Cola fifo de ficheros JSON entre grabar y analizar
 │   ├── ├── ├── ├── fifo_grabar_analizar_fallos/        # carpeta de ficheros JSON con fallo en la cola FIFO entre grabar y analizar
-├── images/                                             # Directorio de imágenes organizado en carpetas por año, mes, dia y número de pin de la carrocería. (Si no existe, se genera solo.)
-│   ├── "año"/
+├── images/                           # Directorio de imágenes organizado en carpetas por año, mes, dia y número de pin de la carrocería.
+│   ├── "año"/                        # La estructura de images se genera sola si no existe.
 │   ├── ├──  "mes"/
 │   ├── ├── ├── "dia"/
 │   ├── ├── ├── ├── "pin"/
-├── logs/                                               # Directorio de logs organizado en carpetas por año, mes, y dia. (Si no existe, se genera solo.)
-│   ├── "año"/           
+├── logs/                             # Directorio de logs organizado en carpetas por año, mes, y dia.
+│   ├── "año"/                        # La estructura de logs se genera sola si no existe.
 │   ├── ├──  "mes"/
 │   ├── ├── ├── "dia"/
 │   ├── ├── ├── ├── "pin"/ 
