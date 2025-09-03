@@ -128,22 +128,22 @@ TFE/
 │   ├── App/         
 │   ├── ├── Local/         
 │   ├── ├── ├── ordenes/        
-│   ├── ├── ├── ├── fifo_analizar_resultados/       # Cola fifo de ficheros JSON entre analizar y resultados
-│   ├── ├── ├── ├── fifo_analizar_resultados_fallos/   # Ficheros JSON con fallo en la cola FIFO entre analizar-resultados
-│   ├── ├── ├── ├── fifo_grabar_analizar/           # Cola fifo de ficheros JSON entre grabar y analizar
-│   ├── ├── ├── ├── fifo_grabar_analizar_fallos/    # carpeta de ficheros JSON con fallo en la cola FIFO entre grabar y analizar
-├── images/                   # Directorio de imágenes organizado en carpetas por año, mes, dia y número de pin de la carrocería.
-│   ├── "año"/                # La estructura de images se genera sola si no existe.
+│   ├── ├── ├── ├── fifo_analizar_resultados/          # Cola fifo de ficheros JSON entre analizar y resultados
+│   ├── ├── ├── ├── fifo_analizar_resultados_fallos/   # Ficheros JSON con fallo en la cola FIFO analizar-resultados
+│   ├── ├── ├── ├── fifo_grabar_analizar/              # Cola fifo de ficheros JSON entre grabar y analizar
+│   ├── ├── ├── ├── fifo_grabar_analizar_fallos/       # Ficheros JSON con fallo en la cola FIFO grabar-analizar
+├── images/              # Directorio de imágenes organizado en carpetas por año, mes, dia y número de pin de la carrocería.
+│   ├── "año"/           # La estructura de images se genera sola si no existe.
 │   ├── ├──  "mes"/
 │   ├── ├── ├── "dia"/
 │   ├── ├── ├── ├── "pin"/
-├── logs/                     # Directorio de logs organizado en carpetas por año, mes, y dia.
-│   ├── "año"/                # La estructura de logs se genera sola si no existe.
+├── logs/                # Directorio de logs organizado en carpetas por año, mes, y dia.
+│   ├── "año"/           # La estructura de logs se genera sola si no existe.
 │   ├── ├──  "mes"/
 │   ├── ├── ├── "dia"/
 │   ├── ├── ├── ├── "pin"/ 
-├── models/               # Contiene el modelo entrenado de la red neuronal U-Net
-├── patrones/             # Contiene los patrones de referencia
+├── models/              # Contiene el modelo entrenado de la red neuronal U-Net
+├── patrones/            # Contiene los patrones de referencia
 ~~~
 
 
