@@ -117,7 +117,7 @@ Para implementar esta solución, la **arquitectura propuesta** se basa en un mod
 
 Por ello es importante **respetar la estructura de directorios** de este repositorio, descargando el código completo y guardándolo en el equipo con la misma estructura.
 
-```text
+~~~
 TFG/
 ├── data/
 │   ├── raw/              # Datos en bruto
@@ -133,7 +133,7 @@ TFG/
 ├── logs/                 # Archivos de log
 ├── output/               # Resultados de las simulaciones
 └── README.md
-
+~~~
 
 
 ## 3. Generación del dataset y entrenamiento
