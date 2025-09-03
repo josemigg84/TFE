@@ -11,13 +11,13 @@ Los adecuados resultados obtenidos, con métricas (IoU=0,98) aunque preliminares
 - [Simulación](#simulacion)
 
 ## Requerimientos tecnicos del software
-Aquí explicas dependencias (Python, Anaconda, MySQL, Docker...).
+
 
 ## Estructura del proyecto
-Aquí muestras el árbol de carpetas.
+
 
 ## Generacion del dataset y entrenamiento
-Aquí explicas cómo crear el dataset y entrenar el modelo.
+
 
 ## Simulacion
-Aquí explicas cómo ejecutar la simulación.
+
