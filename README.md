@@ -5,13 +5,13 @@ El presente trabajo aborda un problema de inspección de calidad en un proceso d
 Se propone una aplicación de segmentación semántica implementada mediante una arquitectura de red U-Net, que genera máscaras con las zonas de la imagen en las que se ha aplicado masilla. Posteriormente, otro algoritmo verifica si la masilla se encuentra correctamente ubicada, garantizando el adecuado sellado de las carrocerías. Para el entrenamiento del modelo, se ha utilizado un dataset propio, generado con imágenes de las cámaras de inspección, y debido al reducido volumen y a la escasa variabilidad de los datos, se han utilizado técnicas de data augmentation que han aportado robustez al sistema y han evitado el sobreajuste del modelo durante la fase de entrenamiento.
 Los adecuados resultados obtenidos, con métricas (IoU=0,98) aunque preliminares, indican la viabilidad de la solución aportada y la robustez del sistema frente a diferentes condiciones de iluminación. La principal aportación de este trabajo radica en la aplicación práctica de técnicas de segmentación semántica a un problema real de inspección en la industria del automóvil, demostrando que es posible desarrollar este tipo de soluciones con medios propios de la empresa y alcanzar resultados satisfactorios.
 ## Índice
-- [Requerimientos técnicos del software](#requerimientos-técnicos-del-software)
-- [Estructura del proyecto](#estructura-del-proyecto)
-- [Generación del dataset y entrenamiento](#generación-del-dataset-y-entrenamiento)
-- [Simulación](#simulación)
-- [Resultado esperado](#resultado-esperado)
+- [1. Requerimientos técnicos del software](#requerimientos-técnicos-del-software)
+- [2. Estructura del proyecto](#estructura-del-proyecto)
+- [3. Generación del dataset y entrenamiento](#generación-del-dataset-y-entrenamiento)
+- [4. Simulación](#simulación)
+- [5. Resultado esperado](#resultado-esperado)
 
-## Requerimientos técnicos del software
+## 1. Requerimientos técnicos del software
 - **Lenguaje y versión**: El software se ha desarrollado utilizando la versión de **Python 3.11.3**. No obstante para herramientas auxiliares como **Labelme** o **Albumentations**, se han empleado entornos adicionales con otras versiones. Se recomienda utilizar estas mismas versiones para asegurar la compatibilidad del sistema, aunque en algunos casos versiones anteriores también pueden ser válidas.
 - **Entorno de ejecución**: Para el desarrollo de este trabajo se han utilizado diferentes entornos virtuales de **Anaconda**. Se ha utilizado un entorno principal para la ejecución general del sistema, pero por problema de compatibilidades de paquetes se han utilizados dos entornos virtuales más, uno para la herramienta **labelme** y otro para **Albumentations**. Se recomienda el uso de entornos virtuales (por ejemplo **Anaconda** o **venv**) que permitan instalar las dependencias necesarias para ejecutar el software.
 - **Motor de la base de datos**: MySQL Community Server – GPL, versión 8.2.0
