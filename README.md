@@ -29,7 +29,10 @@ Aunque no es un requisito, para la pruebas se recomienda el uso de un contenedor
 2. **Instalar dependencias principales** (instalar individualmente via pip dentro del entorno):  
     ~~~
    pip install python-snap7==2.0.2
+    ~~~
+    ~~~
    pip install opencv-python==4.11.0.86
+    ~~~
    pip install matplotlib==3.10.5
    pip install mysql-connector-python==9.4.0
    pip install python-dotenv==1.1.1
