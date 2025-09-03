@@ -9,6 +9,7 @@ Los adecuados resultados obtenidos, con métricas (IoU=0,98) aunque preliminares
 - [Estructura del proyecto](#estructura-del-proyecto)
 - [Generación del dataset y entrenamiento](#generación-del-dataset-y-entrenamiento)
 - [Simulación](#simulación)
+- [Resultado esperado](#resultado-esperado)
 
 ## Requerimientos técnicos del software
 
@@ -21,3 +22,5 @@ Los adecuados resultados obtenidos, con métricas (IoU=0,98) aunque preliminares
 
 ## Simulación
 
+
+## Resultado esperado
