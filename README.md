@@ -96,7 +96,7 @@ Aunque no es un requisito, para la pruebas se recomienda el uso de un contenedor
     ~~~
    docker pull mysql:8.2.0
     ~~~
-4. Con el siguiente comando, **crear un contenedor** a partir de la imagen descargada que exponga el **puerto 3306** del contenedor en el puerto 3306 de nuestra máquina local (puerto por defecto). A modo de ejemplo el nombre del contenedor se pone como TFE y el password del usuario root: mysql (estos ajustes se pueden personalizar):
+4. Con el siguiente comando, **crear un contenedor** a partir de la imagen descargada que exponga el **puerto 3306** del contenedor en el **puerto 3306** de nuestra máquina local (puerto por defecto). A modo de ejemplo, el nombre del contenedor se pone como TFE y el password del usuario root: mysql (estos ajustes se pueden personalizar):
     ~~~
    docker run -p 3306:3306 --name TFE -e MYSQL_ROOT_PASSWORD=mysql -d mysql:8.2.0
     ~~~
