@@ -71,14 +71,17 @@ Aunque no es un requisito, para la pruebas se recomienda el uso de un contenedor
 1. **Crear un entorno virtual y activarlo** (ejemplo con nombre `albumentations`):  
     ~~~
    conda create -n albumentations python=3.8
+    ~~~
+    ~~~
    conda activate albumentations
     ~~~
-2. **Instalar dependencias necesarias** (instalar individualmente via pip dentro del entorno):  
-- albumentations (instalado via pip):
+2. **Instalar dependencias necesarias** (instalar individualmente via pip dentro del entorno):
+
+   **albumentations** (instalado via pip):
     ~~~
    pip install albumentations
     ~~~
-- opencv-python (versión completa: necesaria para soporte gráfico, evitando instalar opencv-python-headless):
+   **opencv-python** (versión completa: necesaria para soporte gráfico, evitando instalar opencv-python-headless):
     ~~~
    pip install opencv-python
     ~~~
