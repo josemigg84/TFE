@@ -52,14 +52,16 @@ Aunque no es un requisito, para la pruebas se recomienda el uso de un contenedor
 1. **Crear un entorno virtual y activarlo** (ejemplo con nombre `etiquetado`):  
     ~~~
    conda create -n etiquetado python=3.8
+    ~~~
+    ~~~
    conda activate etiquetado
     ~~~
 2. **Instalar dependencias necesarias** (instalar individualmente via pip dentro del entorno):  
-- pyside2 (para la interfaz gráfica, instalado via conda-forge):
+   **pyside2** (para la interfaz gráfica, instalado via conda-forge):
     ~~~
    conda install -c conda-forge pyside2
     ~~~
-- labelme (instalado via pip):
+   **labelme** (instalado via pip):
     ~~~
    pip install labelme
     ~~~
