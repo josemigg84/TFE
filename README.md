@@ -18,7 +18,7 @@ Los adecuados resultados obtenidos, con métricas (IoU=0,98) aunque preliminares
 Aunque no es un requisito, para la pruebas se recomienda el uso de un contenedor **Docker** por su sencillez.
 
 ### Paso 1. Instalación del entorno principal
-1. **Instalar Anaconda**  
+1. **Instalar Anaconda** desde el sitio oficial:
    [Descargar Anaconda](https://www.anaconda.com/download)
 
 2. **Crear un entorno virtual y activarlo** (ejemplo con nombre `TFG`):  
