@@ -24,6 +24,8 @@ Aunque no es un requisito, para la pruebas se recomienda el uso de un contenedor
 2. **Crear un entorno virtual y activarlo** (ejemplo con nombre `TFG`):  
     ~~~
    conda create -n TFG python=3.11.3
+    ~~~
+    ~~~
    conda activate TFG
     ~~~
 2. **Instalar dependencias principales** (instalar individualmente via pip dentro del entorno):  
@@ -33,9 +35,16 @@ Aunque no es un requisito, para la pruebas se recomienda el uso de un contenedor
     ~~~
    pip install opencv-python==4.11.0.86
     ~~~
+    ~~~
    pip install matplotlib==3.10.5
+    ~~~
+    ~~~
    pip install mysql-connector-python==9.4.0
+    ~~~
+    ~~~
    pip install python-dotenv==1.1.1
+    ~~~
+    ~~~
    pip install tensorflow==2.20.0
     ~~~
 
