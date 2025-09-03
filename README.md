@@ -12,4 +12,4 @@ Los adecuados resultados obtenidos, con métricas (IoU=0,98) aunque preliminares
 - [Resultados esperados](#resultados-esperados)
 - [Autor](#autor)
 
-##**Requerimientos técnicos del software**
+##Requerimientos técnicos del software
