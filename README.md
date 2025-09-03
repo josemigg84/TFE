@@ -7,8 +7,8 @@ Los adecuados resultados obtenidos, con métricas (IoU=0,98) aunque preliminares
 ## 📑 Índice
 - [Requerimientos técnicos del software](#requerimientos-técnicos-del-software)
 - [Estructura del proyecto](#estructura-del-proyecto)
-- [Generación del dataset y entrenamiento](#generacion-del-dataset-y-entrenamiento)
-- [Simulación](#simulacion)
+- [Generación del dataset y entrenamiento](#generación-del-dataset-y-entrenamiento)
+- [Simulación](#simulación)
 
 ## Requerimientos técnicos del software
 
@@ -16,8 +16,8 @@ Los adecuados resultados obtenidos, con métricas (IoU=0,98) aunque preliminares
 ## Estructura del proyecto
 
 
-## Generacion del dataset y entrenamiento
+## Generación del dataset y entrenamiento
 
 
-## Simulacion
+## Simulación
 
