@@ -19,13 +19,20 @@ Los adecuados resultados obtenidos, con métricas (IoU=0,98) aunque preliminares
 1. **Instalar Anaconda**  
    [Descargar Anaconda](https://www.anaconda.com/download)
 
-2. **Crear un entorno virtual** (ejemplo con nombre `TFG`):  
+2. **Crear un entorno virtual y activarlo** (ejemplo con nombre `TFG`):  
     ~~~
    conda create -n TFG python=3.11.3
    conda activate TFG
     ~~~
-
-
+2. **Intalar dependencias principales** (via pip dentro del entorno):  
+    ~~~
+pip install python-snap7==2.0.2
+pip install opencv-python==4.11.0.86
+pip install matplotlib==3.10.5
+pip install mysql-connector-python==9.4.0
+pip install python-dotenv==1.1.1
+pip install tensorflow==2.20.0
+    ~~~
 
 
 ## Estructura del proyecto
