@@ -17,7 +17,7 @@ Los adecuados resultados obtenidos, con métricas (IoU=0,98) aunque preliminares
 - **Motor de la base de datos**: MySQL Community Server – GPL, versión 8.2.0
 Aunque no es un requisito, para la pruebas se recomienda el uso de un contenedor **Docker** por su sencillez.
 
-+ ### Paso 1. Instalación del entorno principal
+### Paso 1. Instalación del entorno principal
 1. **Instalar Anaconda**  
    [Descargar Anaconda](https://www.anaconda.com/download)
 
@@ -48,7 +48,7 @@ Aunque no es un requisito, para la pruebas se recomienda el uso de un contenedor
    pip install tensorflow==2.20.0
     ~~~
 
-+ ### Instalación del entorno de etiquetado de imágenes
+### Paso 2. Instalación del entorno de etiquetado de imágenes
 1. **Crear un entorno virtual y activarlo** (ejemplo con nombre `etiquetado`):  
     ~~~
    conda create -n etiquetado python=3.8
@@ -64,7 +64,7 @@ Aunque no es un requisito, para la pruebas se recomienda el uso de un contenedor
    pip install labelme
     ~~~
 
-+ ### Instalación del entorno para data augmentation
+### Paso 3. Instalación del entorno para data augmentation
 1. **Crear un entorno virtual y activarlo** (ejemplo con nombre `albumentations`):  
     ~~~
    conda create -n albumentations python=3.8
