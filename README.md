@@ -100,7 +100,7 @@ Aunque no es un requisito, para la pruebas se recomienda el uso de un contenedor
     ~~~
    docker run -p 3306:3306 --name TFE -e MYSQL_ROOT_PASSWORD=mysql -d mysql:8.2.0
     ~~~
-5. Abrir el **gestor de base de datos** seleccionado, **crear un nuevo schema** y **ejecutar en consola los scripts** que se encuentran en el directorio BBDD de este repositorio en este orden:
+5. Abrir el **gestor de base de datos**, **crear un nuevo schema** y **ejecutar en consola los scripts** que se encuentran en el directorio BBDD de este repositorio en este orden:
    - **Script DDL** genera las tablas y sus relaciones, además de crear un índice.
    - **Script DML** inserta los valores fijos de configuración necesarios antes de insertar datos desde el programa de resultados.
 
