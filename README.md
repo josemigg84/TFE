@@ -115,24 +115,35 @@ Para implementar esta solución, la **arquitectura propuesta** se basa en un mod
 
 ![Arquitectura](TFG_Arquitectura.png)
 
-Por ello es importante **respetar la estructura de directorios** de este repositorio, descargando el código completo y guardándolo en el equipo con la misma estructura. El directorio raiz se llama TFE a modo de ejemplo.
+Por ello es importante **respetar la estructura de directorios** de este repositorio tal y como se indica a continuación, descargando el código completo y guardándolo en el equipo con la misma estructura. El directorio raiz se llama TFE a modo de ejemplo.
 
 ~~~
 TFE/
+├── Programs/
+│   ├── AnalizadorFactory/    # Programa del analizador de imágenes
+│   ├── Grabar_imagenes/      # Programa de grabación de imágenes
+│   ├── Resultados/           # Programa de inserción en la BBDD
+│   ├── Scripts/              # Herramientas auxiliares como la generación del dataset o el entrenamiento del modelo
 ├── data/
-│   ├── raw/              # Datos en bruto
-│   ├── processed/        # Datos procesados
-├── src/
-│   ├── capture/          # Captura desde PLC y cámaras
-│   ├── analysis/         # Análisis de imágenes
-│   ├── db_writer/        # Inserción de resultados en MySQL
-├── models/               # Modelos entrenados
-├── config/               # Configuración (YAML, JSON, SQL scripts)
-├── BBDD/                 # Scripts DDL y DML para la base de datos
-├── notebooks/            # Experimentos y pruebas en Jupyter
-├── logs/                 # Archivos de log
-├── output/               # Resultados de las simulaciones
-└── README.md
+│   ├── App/         
+│   ├── ├── Local/         
+│   ├── ├── ├── ordenes/        
+│   ├── ├── ├── ├── fifo_analizar_resultados/           # Cola fifo de ficheros JSON entre analizar y resultados
+│   ├── ├── ├── ├── fifo_analizar_resultados_fallos/    # carpeta de ficheros JSON con fallo en la cola FIFO entre analizar y resultados
+│   ├── ├── ├── ├── fifo_grabar_analizar/               # Cola fifo de ficheros JSON entre grabar y analizar
+│   ├── ├── ├── ├── fifo_grabar_analizar_fallos/        # carpeta de ficheros JSON con fallo en la cola FIFO entre grabar y analizar
+├── images/                                             # Directorio de imágenes organizado en carpetas por año, mes, dia y número de pin de la carrocería. (Si no existe, se genera solo.)
+│   ├── "año"/
+│   ├── ├──  "mes"/
+│   ├── ├── ├── "dia"/
+│   ├── ├── ├── ├── "pin"/
+├── logs/                                               # Directorio de logs organizado en carpetas por año, mes, y dia. (Si no existe, se genera solo.)
+│   ├── "año"/           
+│   ├── ├──  "mes"/
+│   ├── ├── ├── "dia"/
+│   ├── ├── ├── ├── "pin"/ 
+├── models/               # Contiene el modelo entrenado de la red neuronal U-Net
+├── patrones/             # Contiene los patrones de referencia
 ~~~
 
 
