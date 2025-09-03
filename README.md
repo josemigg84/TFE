@@ -24,7 +24,7 @@ Los adecuados resultados obtenidos, con métricas (IoU=0,98) aunque preliminares
    conda create -n TFG python=3.11.3
    conda activate TFG
     ~~~
-2. **Intalar dependencias principales** (via pip dentro del entorno):  
+2. **Instalar dependencias principales** (instalar individualmente via pip dentro del entorno):  
     ~~~
    pip install python-snap7==2.0.2
    pip install opencv-python==4.11.0.86
