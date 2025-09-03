@@ -6,10 +6,18 @@ Se propone una aplicación de segmentación semántica implementada mediante una
 Los adecuados resultados obtenidos, con métricas (IoU=0,98) aunque preliminares, indican la viabilidad de la solución aportada y la robustez del sistema frente a diferentes condiciones de iluminación. La principal aportación de este trabajo radica en la aplicación práctica de técnicas de segmentación semántica a un problema real de inspección en la industria del automóvil, demostrando que es posible desarrollar este tipo de soluciones con medios propios de la empresa y alcanzar resultados satisfactorios.
 ## 📑 Índice
 - [Requerimientos técnicos del software](#requerimientos-tecnicos-del-software)
-- [Instalación](#instalación)
-- [Uso](#uso)
 - [Estructura del proyecto](#estructura-del-proyecto)
-- [Resultados esperados](#resultados-esperados)
-- [Autor](#autor)
+- [Generación del dataset y entrenamiento](#generacion-del-dataset-y-entrenamiento)
+- [Simulación](#simulacion)
 
-##Requerimientos técnicos del software
+## Requerimientos técnicos del software
+Aquí explicas qué necesita: Python, Anaconda, MySQL (o Docker), etc.
+
+## Estructura del proyecto
+Aquí pones el árbol de carpetas y la organización de ficheros.
+
+## Generación del dataset y entrenamiento
+Aquí explicas cómo crear el dataset, qué entorno usar, y cómo entrenar el modelo.
+
+## Simulación
+Aquí explicas cómo ejecutar la simulación, qué partes se pueden probar y cuáles no.
