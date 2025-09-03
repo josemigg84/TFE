@@ -10,14 +10,14 @@ Los adecuados resultados obtenidos, con métricas (IoU=0,98) aunque preliminares
 - [Generación del dataset y entrenamiento](#generacion-del-dataset-y-entrenamiento)
 - [Simulación](#simulacion)
 
-## Requerimientos técnicos del software
-Aquí explicas qué necesita: Python, Anaconda, MySQL (o Docker), etc.
+## Requerimientos tecnicos del software
+Aquí explicas dependencias (Python, Anaconda, MySQL, Docker...).
 
 ## Estructura del proyecto
-Aquí pones el árbol de carpetas y la organización de ficheros.
+Aquí muestras el árbol de carpetas.
 
-## Generación del dataset y entrenamiento
-Aquí explicas cómo crear el dataset, qué entorno usar, y cómo entrenar el modelo.
+## Generacion del dataset y entrenamiento
+Aquí explicas cómo crear el dataset y entrenar el modelo.
 
-## Simulación
-Aquí explicas cómo ejecutar la simulación, qué partes se pueden probar y cuáles no.
+## Simulacion
+Aquí explicas cómo ejecutar la simulación.
