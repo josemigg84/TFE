@@ -115,10 +115,10 @@ Para implementar esta solución, la **arquitectura propuesta** se basa en un mod
 
 ![Arquitectura](TFG_Arquitectura.png)
 
-Por ello es importante **respetar la estructura de directorios** de este repositorio, descargando el código completo y guardándolo en el equipo con la misma estructura.
+Por ello es importante **respetar la estructura de directorios** de este repositorio, descargando el código completo y guardándolo en el equipo con la misma estructura. El directorio raiz se llama TFE a modo de ejemplo.
 
 ~~~
-TFG/
+TFE/
 ├── data/
 │   ├── raw/              # Datos en bruto
 │   ├── processed/        # Datos procesados
