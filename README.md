@@ -6,10 +6,10 @@ Se propone una aplicación de segmentación semántica implementada mediante una
 Los adecuados resultados obtenidos, con métricas (IoU=0,98) aunque preliminares, indican la viabilidad de la solución aportada y la robustez del sistema frente a diferentes condiciones de iluminación. La principal aportación de este trabajo radica en la aplicación práctica de técnicas de segmentación semántica a un problema real de inspección en la industria del automóvil, demostrando que es posible desarrollar este tipo de soluciones con medios propios de la empresa y alcanzar resultados satisfactorios.
 ## Índice
 - [1. Requerimientos técnicos del software](#1-requerimientos-técnicos-del-software)
-- [2. Estructura del proyecto](#estructura-del-proyecto)
-- [3. Generación del dataset y entrenamiento](#generación-del-dataset-y-entrenamiento)
-- [4. Simulación](#simulación)
-- [5. Resultado esperado](#resultado-esperado)
+- [2. Estructura del proyecto](#2-estructura-del-proyecto)
+- [3. Generación del dataset y entrenamiento](#3-generación-del-dataset-y-entrenamiento)
+- [4. Simulación](#4-simulación)
+- [5. Resultado esperado](#5-resultado-esperado)
 
 ## 1. Requerimientos técnicos del software
 - **Lenguaje y versión**: El software se ha desarrollado utilizando la versión de **Python 3.11.3**. No obstante para herramientas auxiliares como **Labelme** o **Albumentations**, se han empleado entornos adicionales con otras versiones. Se recomienda utilizar estas mismas versiones para asegurar la compatibilidad del sistema, aunque en algunos casos versiones anteriores también pueden ser válidas.
@@ -105,13 +105,13 @@ Aunque no es un requisito, para la pruebas se recomienda el uso de un contenedor
    - **Script DML** inserta los valores fijos de configuración necesarios antes de insertar datos desde el programa de resultados.
 
 
-## Estructura del proyecto
+## 2. Estructura del proyecto
 
 
-## Generación del dataset y entrenamiento
+## 3. Generación del dataset y entrenamiento
 
 
-## Simulación
+## 4. Simulación
 
 
-## Resultado esperado
+## 5. Resultado esperado
