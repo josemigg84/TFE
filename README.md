@@ -89,11 +89,22 @@ Aunque no es un requisito, para la pruebas se recomienda el uso de un contenedor
 ### Paso 4. Instalación de la base de datos MySQL con Docker
 1. **Descargar Docker Desktop desde la web oficial:**  
 [Descargar Docker](https://www.docker.com)
-2. **Descargar algún gestor de bases de datos**, para este proyecto se ha utilizado **DataGrip de JetBrains**, pero se puede utilizar cualquier otro válido para **MySQL**
+2. **Descargar algún gestor de bases de datos**. Para este proyecto se ha utilizado **DataGrip de JetBrains**, pero se puede utilizar cualquier otro válido para **MySQL**
    **Datagrip** se puede descargar desde la web oficial: 
 [Descargar DataGrip](https://www.jetbrains.com/es-es/datagrip)
+3. Ejecutar este comando para descargar la imagen **de MySQL versión 8.2**:
+    ~~~
+   docker pull mysql:8.2.0
+    ~~~
+4. Con el siguiente comando, **crear un contenedor** a partir de la imagen descargada que exponga el **puerto 3306** del contenedor en el puerto 3306 de nuestra máquina local (puerto por defecto). A modo de ejemplo el nombre del contenedor se pone como TFE y el password del usuario root: mysql (estos ajustes se pueden personalizar):
+    ~~~
+   docker run -p 3306:3306 --name TFE -e MYSQL_ROOT_PASSWORD=mysql -d mysql:8.2.0
+    ~~~
+5. Abrir el **gestor de base de datos** seleccionado, **crear un nuevo schema** y **ejecutar en consola los scripts** que se encuentran en el directorio BBDD de este repositorio en este orden:
+   - **Script DDL** genera las tablas y sus relaciones, además de crear un índice.
+   - **Script DML** inserta los valores fijos de configuración necesarios antes de insertar datos desde el programa de resultados.
 
-    
+
 ## Estructura del proyecto
 
 
