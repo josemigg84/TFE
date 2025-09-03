@@ -10,8 +10,8 @@ Los adecuados resultados obtenidos, con métricas (IoU=0,98) aunque preliminares
 - [Generación del dataset y entrenamiento](#generacion-del-dataset-y-entrenamiento)
 - [Simulación](#simulacion)
 
-## Requerimientos tecnicos del software
-https://github.com/josemigg84/TFE/blob/main/README.md#requerimientos-tecnicos-del-software
+## Requerimientos técnicos del software
+
 
 ## Estructura del proyecto
 
