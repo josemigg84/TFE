@@ -89,6 +89,8 @@ Aunque no es un requisito, para la pruebas se recomienda el uso de un contenedor
 ### Paso 4. Instalación de la base de datos MySQL con Docker
 1. **Descargar Docker Desktop desde la web oficial:**  
 [Descargar Docker](https://www.docker.com)
+2. **Descargar algún gestor de bases de datos, para este proyecto se ha utilizado DataGrip de JetBrains, se puede desacrgar desde la web oficial:**  
+[Descargar DataGrip](https://www.jetbrains.com/es-es/datagrip)
 
     
 ## Estructura del proyecto
