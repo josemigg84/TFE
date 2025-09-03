@@ -12,8 +12,8 @@ Los adecuados resultados obtenidos, con métricas (IoU=0,98) aunque preliminares
 - [Resultado esperado](#resultado-esperado)
 
 ## Requerimientos técnicos del software
-
-
+1.	Lenguaje y versión: El software se ha desarrollado utilizando la versión de **Python 3.11.3**. No obstante para herramientas auxiliares como **Labelme** o **Albumentations**, se han empleado entornos adicionales con otras versiones. Se recomienda utilizar estas mismas versiones para asegurar la compatibilidad del sistema, aunque en algunos casos versiones anteriores también pueden ser válidas.
+2.	Entorno de ejecución: Para el desarrollo de este trabajo se han utilizado diferentes entornos virtuales de **Anaconda**. Se ha utilizado un entorno principal para la ejecución general del sistema, pero por problema de compatibilidades de paquetes se han utilizados dos entornos virtuales más, uno para la herramienta **labelme** y otro para **Albumentations**. Se recomienda el uso de entornos virtuales (por ejemplo Anaconda o venv) que permitan instalar las dependencias necesarias para ejecutar el software.
 ## Estructura del proyecto
 
 
