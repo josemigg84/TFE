@@ -18,7 +18,6 @@ Los adecuados resultados obtenidos, con métricas (IoU=0,98) aunque preliminares
 Aunque no es un requisito, para la pruebas se recomienda el uso de un contenedor **Docker** por su sencillez.
 
 ### Instalación del entorno principal
-
 1. **Instalar Anaconda**  
    [Descargar Anaconda](https://www.anaconda.com/download)
 
@@ -37,7 +36,29 @@ Aunque no es un requisito, para la pruebas se recomienda el uso de un contenedor
    pip install tensorflow==2.20.0
     ~~~
 
+### Instalación del entorno de etiquetado de imágenes
+1. **Crear un entorno virtual y activarlo** (ejemplo con nombre `etiquetado`):  
+    ~~~
+   conda create -n etiquetado python=3.8
+   conda activate etiquetado
+    ~~~
+2. **Instalar dependencias necesarias** (instalar individualmente via pip dentro del entorno):  
+- pyside2 (para la interfaz gráfica, instalado via conda-forge):
+    ~~~
+   conda install -c conda-forge pyside2
+    ~~~
+- labelme (instalado via pip):
+    ~~~
+   pip install labelme
+    ~~~
 
+
+
+
+
+
+
+    
 ## Estructura del proyecto
 
 
