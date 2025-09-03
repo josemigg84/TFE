@@ -36,7 +36,7 @@ Aunque no es un requisito, para la pruebas se recomienda el uso de un contenedor
    pip install tensorflow==2.20.0
     ~~~
 
-### Instalación del entorno de etiquetado de imágenes
++ ### Instalación del entorno de etiquetado de imágenes
 1. **Crear un entorno virtual y activarlo** (ejemplo con nombre `etiquetado`):  
     ~~~
    conda create -n etiquetado python=3.8
@@ -52,7 +52,21 @@ Aunque no es un requisito, para la pruebas se recomienda el uso de un contenedor
    pip install labelme
     ~~~
 
-
++ ### Instalación del entorno para data augmentation
+1. **Crear un entorno virtual y activarlo** (ejemplo con nombre `albumentations`):  
+    ~~~
+   conda create -n albumentations python=3.8
+   conda activate albumentations
+    ~~~
+2. **Instalar dependencias necesarias** (instalar individualmente via pip dentro del entorno):  
+- albumentations (instalado via pip):
+    ~~~
+   pip install albumentations
+    ~~~
+- opencv-python (versión completa: necesaria para soporte gráfico, evitando instalar opencv-python-headless):
+    ~~~
+   pip install opencv-python
+    ~~~
 
 
 
