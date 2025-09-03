@@ -86,7 +86,7 @@ Aunque no es un requisito, para la pruebas se recomienda el uso de un contenedor
    pip install opencv-python
     ~~~
 
-### Paso 4. Instalación de la base de datos con Docker
+### Paso 4. Instalación de la base de datos MySQL con Docker
 1. **Descargar Docker Desktop desde la web oficial:**  
 [Descargar Docker](https://www.docker.com)
 
