@@ -252,11 +252,43 @@ TFE/
 │   ├── Scripts/            
 │   ├── ├──  "entrenar.py"/
 ~~~
-**NOTA**: EL código de ejecución del script es totalmente compatible con el uso de GPU con CUDA y TensorFlow, pero es necesario adecuar previamente el entorno virtual de Anaconda instalando las versiones compatibles con CUDA y cuDNN, así como la versión de TensorFlow que soporte aceleración por GPU, de acuerdo con las características de la tarjeta gráfica del equipo. En el caso de este trabajo, debido a limitaciones técnicas de la GPU disponible, el entrenamiento del modelo se ha realizado utilizando la CPU. 
-
+**NOTA**: EL código de ejecución del script es totalmente compatible con el uso de GPU con CUDA y TensorFlow, pero es necesario adecuar previamente el entorno virtual de Anaconda instalando las versiones compatibles con CUDA y cuDNN, así como la versión de TensorFlow que soporte aceleración por GPU, de acuerdo con las características de la tarjeta gráfica del equipo. En el caso de este trabajo, debido a limitaciones técnicas de la GPU disponible, el entrenamiento del modelo se ha realizado utilizando la CPU y por ello, el entorno virtual generado anteriormente no incluye el soporte de CUDA y cuDNN. 
 
 
 ## 5. Simulación
+Para la ejecución de los programas en un entorno real o la simulación que aquí se propone es necesario crear previamente varios ficheros de variables de entorno `.env` donde se configuran nombres de usuario, contraseñas, o direcciones IP que no están reflejadas en el código por motivos obvios.
+## 1. Para el programa de grabación de imágenes, que se presenta en el siguiente directorio:
+~~~
+TFE/
+├── Programs/
+│   ├── Grabar_imagenes/            
+~~~
+Se necesita crear un fichero `.env` como el que se muestra de ejemplo `.env.example` dentro del mismo directorio. En este fichero se configuran las variables de usuario, contraseña, y las direcciones IP de lás cámaras y PLC. Lo que se muestra a continuación es un ejemplo:
+   ~~~
+    USUARIO="user"
+    PASSWORD="1234"
+    IP_CAM_1="192.168.0.2"
+    IP_CAM_2="192.168.0.3"
+    PLC_IP='192.168.0.10'
+   ~~~
+
+## 1. Para el programa de grabación de resultados en la base de datos, que se presenta en el siguiente directorio:
+~~~
+TFE/
+├── Programs/
+│   ├── Resultados/            
+~~~
+Se necesita crear un fichero `.env` como el que se muestra de ejemplo `.env.example` dentro del mismo directorio. En este fichero se configuran las variables de usuario, contraseña, y las direcciones IP de lás cámaras y PLC. Lo que se muestra a continuación es un ejemplo:
+   ~~~
+    MYSQL_HOST=localhost
+    MYSQL_USER=root
+    MYSQL_PASSWORD=mysql
+    MYSQL_DATABASE=TFG
+    PORT=3306
+   ~~~
+
+
+
 
 
 ## 6. Resultado esperado
