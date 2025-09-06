@@ -424,13 +424,13 @@ En el directorio relativo a cada pin, se guardarán:
 - Una carpeta llamada `debug` con todas las transformaciones intermedias del pipeline de imágenes.
 
 Además, se crearán los logs correspondientes a cada programa en este directorio.
-      ~~~
-       TFE/
-       ├── logs/
-       │   ├── 'año'/
-       │   ├── ├── 'mes'/
-       │   ├── ├── ├── 'dia'/
-      ~~~
+~~~
+TFE/
+├── logs/
+│   ├── 'año'/
+│   ├── ├── 'mes'/
+│   ├── ├── ├── 'dia'/
+~~~
 
 Si se ha realizado la simulación con el programa de grabación de resultados en la BBDD, se habrán insertado en la misma.
 Si no se ha hecho, se habrán almacenado los ficheros `JSON` en la carpeta de la cola FIFO `fifo_analizar_resultados`.
