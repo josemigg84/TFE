@@ -362,8 +362,38 @@ El programa se deja preparado con estas configuraciones, por lo cual dentro de c
 - Se deben copiar el fichero `JSON` de entrada y salida del Analizador.
 
 ### Ejecución de la simulación
-
-
+Una vez que se cumplen los requisitos previos a la simulación, se deben seguir los siguientes pasos:
+### Paso 1. Ejecución del programa de análisis de imágenes
+Se debe abrir una consola de comandos CMD y navegar hasta el directorio donde se encuentra el programa, según se haya guardado en el equipo y se debe llegar hasta este directorio.
+      ~~~
+       TFE/
+       ├── Programs/
+       │   ├── AnalizadorFactory/
+      ~~~
+Una vez aquí, se debe activar el entorno virtual `TFG` generado previamente.
+      ~~~
+       conda activate TFG
+      ~~~
+Y ejecutar el programa principal
+      ~~~
+       python main.py
+      ~~~
+### Paso 2. Ejecución del programa de grabación de resultados
+Este paso solo procede si se ha decidido realizar la simulación con la BBDD. Previamente se han tenido que crear las tablas e insertar los datos de configuración, tal y como se indica previamente.
+Se debe abrir otra consola de comandos CMD y navegar hasta el directorio donde se encuentra el programa, según se haya guardado en el equipo y se debe llegar hasta este directorio.
+      ~~~
+       TFE/
+       ├── Programs/
+       │   ├── Resultados/
+      ~~~
+Una vez aquí, se debe activar el entorno virtual `TFG` generado previamente.
+      ~~~
+       conda activate TFG
+      ~~~
+Y ejecutar el programa principal
+      ~~~
+       python main.py
+      ~~~
 ### Resultado esperado
 
 
