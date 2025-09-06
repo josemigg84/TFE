@@ -205,7 +205,7 @@ Se debe activar el entorno virtual `etiquetado` creado anteriormente y ejecutar 
     labelme
    ~~~
 Una vez arrancado el programa se deben etiquetar manualmente todos los recortes, lo que genera un JSON para cada uno de ellas.
-![MOdeloER](/docs/ModeloER.png)
+![Labelme](/docs/Labelme.png)
 
 ### Paso 3. Ejecución del script que genera la máscara resultante
 Se debe activar el entorno virtual `etiquetado` creado anteriormente y ejecutar el Script "dataset_procesar_json.py" que se encuentra en el directorio:
