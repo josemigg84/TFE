@@ -363,6 +363,7 @@ Como no se puede simular el programa de grabación de imágenes, se parte de est
        │   ├── ├── ├── ├── ├── c1_6320011.jpg/
        │   ├── ├── ├── ├── ├── c2_6320011.jpg/
       ~~~
+![ImagenOriginal](/docs/c1_6320011.jpg)
    - **Las 4 primeras carrocerías de cada modelo tienen los cordones bien aplicados, mientras que la quinta de cada modelo, es decir, las carrocerías 5 y 10 tienen los cordones desviados.**
 
    - **El simulador tiene múltiples opciones configurables desde el fichero `settings.py`, de las cuales se muestran algunas a continuación:**
