@@ -257,7 +257,7 @@ TFE/
 
 ## 5. Simulación
 Para la ejecución de los programas en un entorno real o la simulación que aquí se propone es necesario crear previamente varios ficheros de variables de entorno `.env` donde se configuran nombres de usuario, contraseñas, o direcciones IP que no están reflejadas en el código por motivos obvios.
-## 1. Para el programa de grabación de imágenes, que se presenta en el siguiente directorio:
+# Para el programa de grabación de imágenes, que se presenta en el siguiente directorio:
 ~~~
 TFE/
 ├── Programs/
@@ -272,7 +272,7 @@ Se necesita crear un fichero `.env` como el que se muestra de ejemplo `.env.exam
     PLC_IP='192.168.0.10'
    ~~~
 
-## 2. Para el programa de grabación de resultados en la base de datos, que se presenta en el siguiente directorio:
+# Para el programa de grabación de resultados en la base de datos, que se presenta en el siguiente directorio:
 ~~~
 TFE/
 ├── Programs/
