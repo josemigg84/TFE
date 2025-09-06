@@ -180,6 +180,19 @@ Se pueden realizar recortes por lotes de imágenes del mismo tipo, por lo que es
 Dentro del script se debe ajustar ese tipo de configuración de cámara y modelo utilizada.
 Además los recortes salen numerados desde el valor de una variable llamada `inicio`. Por defecto ese valor está a 1, pero si se realizan varios lotes, se debe ajustar al valor siguiente al número de recortes ya realizados, para evitar que se sobreescriban.
 
+### Paso 2. Etiquetado de las imágenes
+Se debe activar el entorno virtual `etiquetado` creado anteriormente y ejecutar la gui del programa.
+~~~
+conda activate etiquetado
+~~~
+~~~
+labelme
+~~~
+Pero primero, se debe ajustar dentro del script el path de entrada (imágenes originales) y salida de imágenes (recortes).
+Se pueden realizar recortes por lotes de imágenes del mismo tipo, por lo que estás deben estar organizadas por tipo de cámara y modelo previamente.
+Dentro del script se debe ajustar ese tipo de configuración de cámara y modelo utilizada.
+Además los recortes salen numerados desde el valor de una variable llamada `inicio`. Por defecto ese valor está a 1, pero si se realizan varios lotes, se debe ajustar al valor siguiente al número de recortes ya realizados, para evitar que se sobreescriban.
+
 ## 4. Entrenamiento del modelo U-Net
 
 
