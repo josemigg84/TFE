@@ -294,7 +294,7 @@ Como la arquitectura de este trabajo se divide en 3 programas independientes, ha
    - **Programa de grabación de resultados**: Para su simulación es necesario haber instalado previamente el motor y el gestor de la base de datos, tal y como se indica en el paso 4 del punto 1. Aunque la base de datos no resulta imprescindible para visualizar el funcionamiento básico de la simulación, sí lo es para el posterior almacenamiento y tratamiento de la información registrada en la BBDD.
 
 ### Detalles de la simulación
-Como no se puede simular el programa de grabación de imágenes se parte de esta situación inicial:
+Como no se puede simular el programa de grabación de imágenes, se parte de esta situación inicial:
    - **Dentro del directorio donde se guardan los ficheros JSON de la cola FIFO entre el proceso de grabación y el de análisis, hay ya 10 ficheros preparados con la información relativa a 10 carrocerías pendientes de analizar. Son 5 de cada modelo.**
       ~~~
        TFE/
@@ -333,7 +333,29 @@ Como no se puede simular el programa de grabación de imágenes se parte de esta
        │   ├── ├── ├── ├── 6320024/      
        │   ├── ├── ├── ├── 6320025/
       ~~~
-   - **Cada carpeta incluye dos imágenes, una de cada lado de la carrocería y están correctamente nombradas como lo haría el programa de grabación.**
-   - **Las 4 primeras carrocerías de cada modelo tienen los cordones bien aplicados, mientras que la quinta de cada modelo, es decir, la carrocería 5 y 10 tienen los cordones desviados.**
+   - **Cada carpeta incluye dos imágenes, una de cada lado de la carrocería y están correctamente nombradas como lo haría el programa de grabación. Como ejemplo se muestra el directorio para el primer pin**
+      ~~~
+       TFE/
+       ├── images/
+       │   ├── 2025/
+       │   ├── ├── 08/
+       │   ├── ├── ├── 13/
+       │   ├── ├── ├── ├── 6320011/
+       │   ├── ├── ├── ├── ├── c1_6320011.jpg/
+       │   ├── ├── ├── ├── ├── c2_6320011.jpg/
+      ~~~
+   - **Las 4 primeras carrocerías de cada modelo tienen los cordones bien aplicados, mientras que la quinta de cada modelo, es decir, las carrocerías 5 y 10 tienen los cordones desviados.**
+
+
+      ~~~
+       IMAGEN_GUARDAR = True               #OPCION DE GUARDAR O NO LAS IMAGENES RESULTANTES, POR ESPACIO
+       IMAGEN_DEBUG = True                 #OPCION DE GUARDAR TODAS LAS TRANSFORMACIONES DE IMAGENES. Cada vez que se ejecuta se sobreescriben
+       COPIA_JSON_IN_OUT = True            #Opción que copia el json de entrada y de salida en la carpeta de resultados de imagen
+       DIBUJAR_VENTANAS_RECORTE = True    #OPCION DE DIBUJAR EN LA IMAGEN LAS VENTANAS QUE SE RECORTAN PARA LA FCN
+       DIBUJAR_CORDONES_ORIGINALES = False  # == True dibuja en la imagen los cordones orginales y los modificados; ==False solo dibuja los cordones modificados
+       FORMATO_GUARDAR_RES = "png" #png o jpg
+       FORMATO_GUARDAR_DEBUG = "png"
+       FORMATO_GUARDAR_MASK = "png"
+      ~~~
 
 ## 6. Resultado esperado
