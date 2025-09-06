@@ -148,7 +148,7 @@ TFE/
 ~~~
 
 
-## 3. Generación del dataset y entrenamiento
+## 3. Generación del dataset
 El resultado 
 
 ## 4. Entrenamiento del modelo U-Net
