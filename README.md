@@ -149,7 +149,11 @@ TFE/
 
 
 ## 3. Generación del dataset
-El resultado 
+El dataset resultante para este TFE se puede observar en:
+TFE/
+├── dataset/
+│   ├── images/    # donde se encuentran las imágenes
+│   ├── masks/     # donde se encuentran las máscaras
 
 ## 4. Entrenamiento del modelo U-Net
 
