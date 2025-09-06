@@ -447,6 +447,10 @@ TFE/
 │   ├── ├── ├── ├── fifo_grabar_analizar_fallos/       # Ficheros JSON con fallo en la cola FIFO grabar-analizar
 ~~~
 
+### Ejemplo de fichero JSON de salida del analizador
+
+![Resultado_OK](/docs/JSON_salida.png)
+
 ### Ejemplo de máscara devuelta por la red U-Net con la detección de masilla
 
 ![Resultado_OK](/docs/15_mascara_masilla.png)
