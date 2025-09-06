@@ -14,9 +14,9 @@ Los adecuados resultados obtenidos, con métricas (IoU=0,98) aunque preliminares
 
 ## 1. Requerimientos técnicos del software
 - **Lenguaje y versión**: El software se ha desarrollado utilizando la versión de **Python 3.11.3**. No obstante para herramientas auxiliares como **Labelme** o **Albumentations**, se han empleado entornos adicionales con otras versiones. Se recomienda utilizar estas mismas versiones para asegurar la compatibilidad del sistema, aunque en algunos casos versiones anteriores también pueden ser válidas.
-- **Entorno de ejecución**: Para el desarrollo de este trabajo se han utilizado diferentes entornos virtuales de **Anaconda**. Se ha utilizado un entorno principal para la ejecución general del sistema, pero por problema de compatibilidades de paquetes se han utilizados dos entornos virtuales más, uno para la herramienta **labelme** y otro para **Albumentations**. Se recomienda el uso de entornos virtuales (por ejemplo **Anaconda** o **venv**) que permitan instalar las dependencias necesarias para ejecutar el software.
+- **Entorno de ejecución**: Para el desarrollo de este trabajo se han utilizado diferentes entornos virtuales de **Anaconda**. Se ha utilizado un entorno principal para la ejecución general del sistema, pero por problema de compatibilidades de paquetes se han utilizado dos entornos virtuales más, uno para la herramienta **labelme** y otro para **Albumentations**. Se recomienda el uso de entornos virtuales (por ejemplo **Anaconda** o **venv**) que permitan instalar las dependencias necesarias para ejecutar el software.
 - **Motor de la base de datos**: MySQL Community Server – GPL, versión 8.2.0
-Aunque no es un requisito, para la pruebas se recomienda el uso de un contenedor **Docker** por su sencillez.
+Aunque no es un requisito, para las pruebas se recomienda el uso de un contenedor **Docker** por su sencillez.
 
 ### Paso 1. Instalación del entorno principal
 1. **Instalar Anaconda** desde el sitio oficial:
@@ -116,7 +116,7 @@ Para implementar esta solución, la **arquitectura propuesta** se basa en un mod
 
 ![Arquitectura](TFG_Arquitectura.png)
 
-Por ello es importante **respetar la estructura de directorios** de este repositorio tal y como se indica a continuación, descargando el código completo y guardándolo en el equipo con la misma estructura. El directorio raiz se llama TFE a modo de ejemplo.
+Por ello es importante **respetar la estructura de directorios** de este repositorio tal y como se indica a continuación, descargando el código completo y guardándolo en el equipo con la misma estructura. El directorio raíz se llama TFE a modo de ejemplo.
 
 ~~~
 TFE/
@@ -181,7 +181,7 @@ Dentro del script se debe ajustar ese tipo de configuración de cámara y modelo
 Además los recortes salen numerados desde el valor de una variable llamada `inicio`. Por defecto ese valor está a 1, pero si se realizan varios lotes, se debe ajustar al valor siguiente al número de recortes ya realizados, para evitar que se sobreescriban.
 
 ### Paso 2. Etiquetado de las imágenes
-Se debe activar el entorno virtual `etiquetado` creado anteriormente y ejecutar la gui del programa.
+Se debe activar el entorno virtual `etiquetado` creado anteriormente y ejecutar la interfaz gráfica de usuario (GUI) del programa.
    ~~~
     conda activate etiquetado
    ~~~
@@ -212,7 +212,7 @@ TFE/
 ~~~
 Previamente, se debe ajustar dentro del script el path de entrada, donde se encuentran las carpetas y el path de salida donde se desea guardar las máscaras.
 Las carpetas creadas en el paso anterior tienen la forma `nombre_json`, siendo nombre el numero de imagen de recorte original.
-La ejecución de este script copia el fichero `label.png` incluido dentro de la carpeta y lo renombra con el mismo número de la imagen de recorte, el cual se extrae del nombre de la carpeta. Esto permite mantener correctamente la referencia entre imágen y máscara.
+La ejecución de este script copia el fichero `label.png` incluido dentro de la carpeta y lo renombra con el mismo número de la imagen de recorte, el cual se extrae del nombre de la carpeta. Esto permite mantener correctamente la referencia entre imagen y máscara.
 
 ### Paso 5. Uso de técnicas de aumentación de datos
 Se debe activar el entorno virtual `albumentations` creado anteriormente y ejecutar el Script `Albumentations.py` que se encuentra en el directorio:
@@ -223,7 +223,9 @@ TFE/
 │   ├── ├──  "Albumentations.py"/
 ~~~
 Con las dos carpetas, la de imágenes y máscaras ya generadas en los pasos previos, ahora se ajusta dentro de este script el path de entrada de imagenes y máscaras, además de los dos path de salida.
-Dentro del script se han configurado 29 transformaciones de imágenes, además de guardar la imagen original. Las parejas de imagen/máscara resultantes se nombran de forma aleatorio con un dígito de 6 cifras, evitando que el orden de entrada de las imágenes en los lotes de entrenamiento afecten a los datos de validación del mismo.
+Dentro del script se han configurado 29 transformaciones de imágenes, además de guardar la imagen original. Las parejas de imagen/máscara resultantes se nombran de forma aleatoria con un dígito de 6 cifras, evitando que el orden de entrada de las imágenes en los lotes de entrenamiento afecte a los datos de validación del mismo.
+
+Con estos pasos, se han generado un total de 8010 imágenes con sus máscaras correspondientes para poder entrenar la red neuronal U-Net.
 
 ## 4. Entrenamiento del modelo U-Net
 
