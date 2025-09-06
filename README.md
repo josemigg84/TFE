@@ -228,8 +228,30 @@ Dentro del script se han configurado 29 transformaciones de imágenes, además d
 Con estos pasos, se han generado un total de 8010 imágenes con sus máscaras correspondientes para poder entrenar la red neuronal U-Net.
 
 ## 4. Entrenamiento del modelo U-Net
+El modelo de segmentación está basado en la **arquitectura U-Net**, con un dataset propio de 8010 imágenes y máscaras, dividido en **80% para entrenamiento** y **20% para validación**.
 
+**Configuración principal**:
 
+   - **Tamaño de imagen**: 256x256 px
+
+   - **Batch size**: 8
+
+   - **Épocas**: 20
+
+   - **Optimizador**: Adam
+
+   - **Función de pérdida**: Binary Cross-Entropy
+
+   - **Métricas**: Accuracy, Binary IoU
+
+El mejor modelo alcanzó un IoU ≈ 0.98, demostrando la viabilidad de la solución en un entorno industrial.
+Para el entrenamiento se debe activar el entorno virtual `TFG` creado anteriormente y ejecutar el Script `entrenar.py` que se encuentra en el directorio:
+~~~
+TFE/
+├── Programs/
+│   ├── Scripts/            
+│   ├── ├──  "entrenar.py"/
+~~~
 ## 5. Simulación
 
 
