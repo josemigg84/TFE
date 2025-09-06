@@ -252,6 +252,10 @@ TFE/
 │   ├── Scripts/            
 │   ├── ├──  "entrenar.py"/
 ~~~
+**NOTA**: EL código de ejecución del script es totalmente compatible con el uso de GPU con CUDA y TensorFlow, pero es necesario adecuar previamente el entorno virtual de Anaconda instalando las versiones compatibles con CUDA y cuDNN, así como la versión de TensorFlow que soporte aceleración por GPU, de acuerdo con las características de la tarjeta gráfica del equipo. En el caso de este trabajo, debido a limitaciones técnicas de la GPU disponible, el entrenamiento del modelo se ha realizado utilizando la CPU. 
+
+
+
 ## 5. Simulación
 
 
