@@ -10,7 +10,6 @@ Los adecuados resultados obtenidos, con métricas (IoU=0,98) aunque preliminares
 - [3. Generación del dataset](#3-generación-del-dataset)
 - [4. Entrenamiento del modelo U-Net](#4-entrenamiento-del-modelo-u-net)
 - [5. Simulación](#5-simulación)
-- [6. Resultado esperado](#6-resultado-esperado)
 
 ## 1. Requerimientos técnicos del software
 - **Lenguaje y versión**: El software se ha desarrollado utilizando la versión de **Python 3.11.3**. No obstante para herramientas auxiliares como **Labelme** o **Albumentations**, se han empleado entornos adicionales con otras versiones. Se recomienda utilizar estas mismas versiones para asegurar la compatibilidad del sistema, aunque en algunos casos versiones anteriores también pueden ser válidas.
@@ -357,5 +356,14 @@ Como no se puede simular el programa de grabación de imágenes, se parte de est
        FORMATO_GUARDAR_DEBUG = "png"
        FORMATO_GUARDAR_MASK = "png"
       ~~~
+El programa se deja preparado con estas configuraciones, por lo cual dentro de cada directorio relativo a cada pin:
+- Se deben guardar las imágenes resultantes y en el formato `png`.
+- Se deben guardar todas las transformaciones intermedias del pipeline en la carpeta `DEBUG` y en el formato `png`.
+- Se deben copiar el fichero `JSON` de entrada y salida del Analizador.
 
-## 6. Resultado esperado
+### Ejecución de la simulación
+
+
+### Resultado esperado
+
+
