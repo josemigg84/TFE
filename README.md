@@ -147,17 +147,20 @@ TFE/
 ~~~
 ### A continuación se muestran los diagramas de clases UML de los diferentes programas y el modelo entidad relación (ER) de la BBDD
 
-####**Diagrama de clases UML del proceso de grabación de imágenes**
+**Diagrama de clases UML del proceso de grabación de imágenes**
 
 ![UMLGrabar](/docs/GrabarUML.png)
 
 **Diagrama de clases UML del proceso de análisis de imágenes**
+
 ![UMLAnalizar](/docs/AnalizarUML_FactoryMethod.png)
 
 **Diagrama de clases UML del proceso de grabación del resultado**
+
 ![UMLResultados](/docs/ResultadosUML.png)
 
 **Modelo Entidad-Relación de la capa de persistencia**
+
 ![MOdeloER](/TFG.drawio.png)
 
 ## 3. Generación del dataset
