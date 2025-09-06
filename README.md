@@ -166,6 +166,20 @@ TFE/
 │   ├── masks/     # donde se encuentran las máscaras
 ~~~
 
+Para la generación del dataset se han seguido los siguientes pasos:
+### Paso 1. Recorte de las imágenes
+Se debe ejecutar el Script "Recortar.py" bajo el entorno virtual `albumentations` creado anteriormente.
+~~~
+TFE/
+├── Programs/
+│   ├── Scripts/            
+│   ├── ├──  "Recortar.py"/
+~~~
+Pero primero, se debe ajustar dentro del script el path de entrada (imágenes originales) y salida de imágenes (recortes).
+Se pueden realizar recortes por lotes de imágenes del mismo tipo, por lo que estás deben estar organizadas por tipo de cámara y modelo previamente.
+Dentro del script se debe ajustar ese tipo de configuración de cámara y modelo utilizada.
+Además los recortes salen numerados desde el valor de una variable llamada `inicio`. Por defecto ese valor está a 1, pero si se realizan varios lotes, se debe ajustar al valor siguiente al número de recortes ya realizados, para evitar que se sobreescriban.
+
 ## 4. Entrenamiento del modelo U-Net
 
 
