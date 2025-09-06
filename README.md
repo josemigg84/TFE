@@ -147,7 +147,8 @@ TFE/
 ~~~
 ### A continuación se muestran los diagramas de clases UML de los diferentes programas y el modelo entidad relación (ER) de la BBDD
 
-**Diagrama de clases UML del proceso de grabación de imágenes**
+####**Diagrama de clases UML del proceso de grabación de imágenes**
+
 ![UMLGrabar](/docs/GrabarUML.png)
 
 **Diagrama de clases UML del proceso de análisis de imágenes**
