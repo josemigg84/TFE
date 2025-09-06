@@ -346,7 +346,7 @@ Como no se puede simular el programa de grabación de imágenes, se parte de est
       ~~~
    - **Las 4 primeras carrocerías de cada modelo tienen los cordones bien aplicados, mientras que la quinta de cada modelo, es decir, las carrocerías 5 y 10 tienen los cordones desviados.**
 
-
+   - **El simulador tiene múltiples opciones configurables desde el fichero `settings.py`, de las cuales se muestran algunas a continuación:**
       ~~~
        IMAGEN_GUARDAR = True               #OPCION DE GUARDAR O NO LAS IMAGENES RESULTANTES, POR ESPACIO
        IMAGEN_DEBUG = True                 #OPCION DE GUARDAR TODAS LAS TRANSFORMACIONES DE IMAGENES. Cada vez que se ejecuta se sobreescriben
