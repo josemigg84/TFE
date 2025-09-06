@@ -149,7 +149,16 @@ TFE/
 
 
 ## 3. Generación del dataset
-El dataset resultante para este TFE se puede observar en:
+Para este TFE se ha utilizado un **dataset propio**, obtenido a partir de imágenes capturadas con las cámaras de inspección.
+El proceso incluyó:
+
+   - **Recorte** de las zonas de interés.
+
+   - **Etiquetado** para diferenciar la clase masilla del fondo.
+
+   - Aplicación de **técnicas de aumentación de datos** para incrementar la variabilidad del conjunto.
+
+La estructura final del dataset se puede observar en el siguiente directorio:
 ~~~
 TFE/
 ├── dataset/
