@@ -175,23 +175,55 @@ TFE/
 │   ├── Scripts/            
 │   ├── ├──  "Recortar.py"/
 ~~~
-Pero primero, se debe ajustar dentro del script el path de entrada (imágenes originales) y salida de imágenes (recortes).
+Previamente, se debe ajustar dentro del script el path de entrada (imágenes originales) y salida de imágenes (recortes).
 Se pueden realizar recortes por lotes de imágenes del mismo tipo, por lo que estás deben estar organizadas por tipo de cámara y modelo previamente.
 Dentro del script se debe ajustar ese tipo de configuración de cámara y modelo utilizada.
 Además los recortes salen numerados desde el valor de una variable llamada `inicio`. Por defecto ese valor está a 1, pero si se realizan varios lotes, se debe ajustar al valor siguiente al número de recortes ya realizados, para evitar que se sobreescriban.
 
 ### Paso 2. Etiquetado de las imágenes
 Se debe activar el entorno virtual `etiquetado` creado anteriormente y ejecutar la gui del programa.
+   ~~~
+    conda activate etiquetado
+   ~~~
+   ~~~
+    labelme
+   ~~~
+Una vez arrancado el programa se deben etiquetar manualmente todos los recortes, lo que genera un JSON para cada uno de ellas.
+
+### Paso 3. Ejecución del script que genera la máscara resultante
+Se debe activar el entorno virtual `etiquetado` creado anteriormente y ejecutar el Script "dataset_procesar_json.py" que se encuentra en el directorio:
 ~~~
-conda activate etiquetado
+TFE/
+├── Programs/
+│   ├── Scripts/            
+│   ├── ├──  "dataset_procesar_json.py"/
 ~~~
+Previamente, se debe ajustar dentro del script el path de entrada, donde se encuentran los ficheros JSON.
+Esto llama a un comando interno del programa Labelme, para cada uno de los ficheros JSON generados, evitando tener que hacerlo manualmente uno a uno.
+El resultado es el mismo que hacerlo de forma individual, se genera una carpeta con varios ficheros dentro, y dentro de ella se encuentra la máscara resultante con el nombre `label.png`
+
+### Paso 4. Copia y renombrado de cada una de las máscaras con el mismo nombre que la imagen de recorte
+Se debe activar el entorno virtual `etiquetado` creado anteriormente y ejecutar el Script `dataset_renombrar_label.py` que se encuentra en el directorio:
 ~~~
-labelme
+TFE/
+├── Programs/
+│   ├── Scripts/            
+│   ├── ├──  "dataset_renombrar_label.py"/
 ~~~
-Pero primero, se debe ajustar dentro del script el path de entrada (imágenes originales) y salida de imágenes (recortes).
-Se pueden realizar recortes por lotes de imágenes del mismo tipo, por lo que estás deben estar organizadas por tipo de cámara y modelo previamente.
-Dentro del script se debe ajustar ese tipo de configuración de cámara y modelo utilizada.
-Además los recortes salen numerados desde el valor de una variable llamada `inicio`. Por defecto ese valor está a 1, pero si se realizan varios lotes, se debe ajustar al valor siguiente al número de recortes ya realizados, para evitar que se sobreescriban.
+Previamente, se debe ajustar dentro del script el path de entrada, donde se encuentran las carpetas y el path de salida donde se desea guardar las máscaras.
+Las carpetas creadas en el paso anterior tienen la forma `nombre_json`, siendo nombre el numero de imagen de recorte original.
+La ejecución de este script copia el fichero `label.png` incluido dentro de la carpeta y lo renombra con el mismo número de la imagen de recorte, el cual se extrae del nombre de la carpeta. Esto permite mantener correctamente la referencia entre imágen y máscara.
+
+### Paso 5. Uso de técnicas de aumentación de datos
+Se debe activar el entorno virtual `albumentations` creado anteriormente y ejecutar el Script `Albumentations.py` que se encuentra en el directorio:
+~~~
+TFE/
+├── Programs/
+│   ├── Scripts/            
+│   ├── ├──  "Albumentations.py"/
+~~~
+Con las dos carpetas, la de imágenes y máscaras ya generadas en los pasos previos, ahora se ajusta dentro de este script el path de entrada de imagenes y máscaras, además de los dos path de salida.
+Dentro del script se han configurado 29 transformaciones de imágenes, además de guardar la imagen original. Las parejas de imagen/máscara resultantes se nombran de forma aleatorio con un dígito de 6 cifras, evitando que el orden de entrada de las imágenes en los lotes de entrenamiento afecten a los datos de validación del mismo.
 
 ## 4. Entrenamiento del modelo U-Net
 
