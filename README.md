@@ -295,7 +295,7 @@ Como la arquitectura de este trabajo se divide en 3 programas independientes, ha
 
 ### Detalles de la simulación
 Como no se puede simular el programa de grabación de imágenes se parte de esta situación inicial:
-   - **Dentro del directorio donde se guardan los ficheros JSON de la cola FIFO entre el proceso de grabación y el de análisis, hay ya 10 ficheros preparados con la información relativa a 10 carrocerías pendientes de analizar. Son 5 de cada modelo**
+   - **Dentro del directorio donde se guardan los ficheros JSON de la cola FIFO entre el proceso de grabación y el de análisis, hay ya 10 ficheros preparados con la información relativa a 10 carrocerías pendientes de analizar. Son 5 de cada modelo.**
       ~~~
        TFE/
        ├── data/
@@ -303,9 +303,37 @@ Como no se puede simular el programa de grabación de imágenes se parte de esta
        │   ├── ├── Local/
        │   ├── ├── ├── ordenes/
        │   ├── ├── ├── ├── fifo_grabar_analizar/
+       │   ├── ├── ├── ├── ├── 6320011_in.json/
+       │   ├── ├── ├── ├── ├── 6320011_in.json/
+       │   ├── ├── ├── ├── ├── 6320012_in.json/
+       │   ├── ├── ├── ├── ├── 6320013_in.json/
+       │   ├── ├── ├── ├── ├── 6320014_in.json/
+       │   ├── ├── ├── ├── ├── 6320015_in.json/
+       │   ├── ├── ├── ├── ├── 6320021_in.json/
+       │   ├── ├── ├── ├── ├── 6320022_in.json/
+       │   ├── ├── ├── ├── ├── 6320023_in.json/
+       │   ├── ├── ├── ├── ├── 6320024_in.json/
+       │   ├── ├── ├── ├── ├── 6320025_in.json/
       ~~~
-   - **Dentro del directorio donde se guardan las imágenes, hay 10 carpetas con el nombre del número de pin de cada carrocería pendiente de analizar**
-   - **Cada carpeta incluye dos imágenes, una de cada lado de la carrocería y están correctamente nombradas como lo haría el programa de grabación**
+   - **Dentro del directorio donde se guardan las imágenes, hay 10 carpetas con el nombre del número de pin de cada carrocería pendiente de analizar.**
+      ~~~
+       TFE/
+       ├── images/
+       │   ├── 2025/
+       │   ├── ├── 08/
+       │   ├── ├── ├── 13/
+       │   ├── ├── ├── ├── 6320011/
+       │   ├── ├── ├── ├── 6320012/
+       │   ├── ├── ├── ├── 6320013/
+       │   ├── ├── ├── ├── 6320014/
+       │   ├── ├── ├── ├── 6320015/      
+       │   ├── ├── ├── ├── 6320021/
+       │   ├── ├── ├── ├── 6320022/
+       │   ├── ├── ├── ├── 6320023/
+       │   ├── ├── ├── ├── 6320024/      
+       │   ├── ├── ├── ├── 6320025/
+      ~~~
+   - **Cada carpeta incluye dos imágenes, una de cada lado de la carrocería y están correctamente nombradas como lo haría el programa de grabación.**
    - **Las 4 primeras carrocerías de cada modelo tienen los cordones bien aplicados, mientras que la quinta de cada modelo, es decir, la carrocería 5 y 10 tienen los cordones desviados.**
 
 ## 6. Resultado esperado
