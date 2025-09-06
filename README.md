@@ -154,16 +154,13 @@ TFE/
 
 **Diagrama de clases UML del proceso de análisis de imágenes**
 
-
 ![UMLAnalizar](/docs/AnalizarUML_FactoryMethod.png)
 
 **Diagrama de clases UML del proceso de grabación del resultado**
 
-
 ![UMLResultados](/docs/ResultadosUML.png)
 
 ### A continuación se muestra el modelo entidad relación (ER) de la BBDD
-
 
 ![MOdeloER](/docs/ModeloER.png)
 
