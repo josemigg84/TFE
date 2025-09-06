@@ -263,7 +263,7 @@ TFE/
 ├── Programs/
 │   ├── Grabar_imagenes/            
 ~~~
-Se necesita crear un fichero `.env` como el que se muestra de ejemplo `.env.example` dentro del mismo directorio. En este fichero se configuran las variables de usuario, contraseña, y las direcciones IP de lás cámaras y PLC. Lo que se muestra a continuación es un ejemplo:
+Se necesita crear un fichero `.env` como el que se muestra de ejemplo `.env.example` dentro del mismo directorio. En este fichero se configuran las variables de usuario, contraseña, y las direcciones IP de las cámaras y PLC. Lo que se muestra a continuación es un ejemplo:
    ~~~
     USUARIO="user"
     PASSWORD="1234"
@@ -272,13 +272,13 @@ Se necesita crear un fichero `.env` como el que se muestra de ejemplo `.env.exam
     PLC_IP='192.168.0.10'
    ~~~
 
-## 1. Para el programa de grabación de resultados en la base de datos, que se presenta en el siguiente directorio:
+## 2. Para el programa de grabación de resultados en la base de datos, que se presenta en el siguiente directorio:
 ~~~
 TFE/
 ├── Programs/
 │   ├── Resultados/            
 ~~~
-Se necesita crear un fichero `.env` como el que se muestra de ejemplo `.env.example` dentro del mismo directorio. En este fichero se configuran las variables de usuario, contraseña, y las direcciones IP de lás cámaras y PLC. Lo que se muestra a continuación es un ejemplo:
+Se necesita crear un fichero `.env` como el que se muestra de ejemplo `.env.example` dentro del mismo directorio. En este fichero se configuran las variables de conexión a la base de datos. Lo que se muestra a continuación es un ejemplo:
    ~~~
     MYSQL_HOST=localhost
     MYSQL_USER=root
