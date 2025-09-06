@@ -7,9 +7,10 @@ Los adecuados resultados obtenidos, con métricas (IoU=0,98) aunque preliminares
 ## Índice
 - [1. Requerimientos técnicos del software](#1-requerimientos-técnicos-del-software)
 - [2. Estructura del proyecto](#2-estructura-del-proyecto)
-- [3. Generación del dataset y entrenamiento](#3-generación-del-dataset-y-entrenamiento)
-- [4. Simulación](#4-simulación)
-- [5. Resultado esperado](#5-resultado-esperado)
+- [3. Generación del dataset](#3-generación-del-dataset)
+- [4. Entrenamiento del modelo U-Net](#4-entrenamiento-del-modelo-u-net)
+- [5. Simulación](#5-simulación)
+- [6. Resultado esperado](#6-resultado-esperado)
 
 ## 1. Requerimientos técnicos del software
 - **Lenguaje y versión**: El software se ha desarrollado utilizando la versión de **Python 3.11.3**. No obstante para herramientas auxiliares como **Labelme** o **Albumentations**, se han empleado entornos adicionales con otras versiones. Se recomienda utilizar estas mismas versiones para asegurar la compatibilidad del sistema, aunque en algunos casos versiones anteriores también pueden ser válidas.
@@ -148,9 +149,12 @@ TFE/
 
 
 ## 3. Generación del dataset y entrenamiento
+El resultado 
+
+## 4. Entrenamiento del modelo U-Net
 
 
-## 4. Simulación
+## 5. Simulación
 
 
-## 5. Resultado esperado
+## 6. Resultado esperado
