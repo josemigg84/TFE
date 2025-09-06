@@ -149,19 +149,23 @@ TFE/
 
 **Diagrama de clases UML del proceso de grabación de imágenes**
 
+
 ![UMLGrabar](/docs/GrabarUML.png)
 
 **Diagrama de clases UML del proceso de análisis de imágenes**
+
 
 ![UMLAnalizar](/docs/AnalizarUML_FactoryMethod.png)
 
 **Diagrama de clases UML del proceso de grabación del resultado**
 
+
 ![UMLResultados](/docs/ResultadosUML.png)
 
-**Modelo Entidad-Relación de la capa de persistencia**
+### A continuación se muestra el modelo entidad relación (ER) de la BBDD
 
-![MOdeloER](/ModeloER.png)
+
+![MOdeloER](/docs/ModeloER.png)
 
 ## 3. Generación del dataset
 Para este TFE se ha utilizado un **dataset propio**, obtenido a partir de imágenes capturadas con las cámaras de inspección.
