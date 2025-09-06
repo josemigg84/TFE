@@ -10,6 +10,7 @@ Los adecuados resultados obtenidos, con métricas (IoU=0,98) aunque preliminares
 - [3. Generación del dataset](#3-generación-del-dataset)
 - [4. Entrenamiento del modelo U-Net](#4-entrenamiento-del-modelo-u-net)
 - [5. Simulación](#5-simulación)
+- [5. Resultado esperado](#6-Resultado-esperado)
 
 ## 1. Requerimientos técnicos del software
 - **Lenguaje y versión**: El software se ha desarrollado utilizando la versión de **Python 3.11.3**. No obstante para herramientas auxiliares como **Labelme** o **Albumentations**, se han empleado entornos adicionales con otras versiones. Se recomienda utilizar estas mismas versiones para asegurar la compatibilidad del sistema, aunque en algunos casos versiones anteriores también pueden ser válidas.
@@ -415,7 +416,7 @@ Y ejecutar el programa principal
 ~~~
 python main.py
 ~~~
-### Resultado esperado
+## 6. Resultado esperado
 En el directorio relativo a cada pin, se guardarán:
 - El fichero `JSON` de entrada del analizador (el que lee en la cola FIFO entre grabar y analizar)
 - El fichero `JSON` de salida del analizador (el que escribe en la cola FIFO entre analizar y resultado)
