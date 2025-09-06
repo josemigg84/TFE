@@ -161,7 +161,7 @@ TFE/
 
 **Modelo Entidad-Relación de la capa de persistencia**
 
-![MOdeloER](/TFG.drawio.png)
+![MOdeloER](/ModeloER.png)
 
 ## 3. Generación del dataset
 Para este TFE se ha utilizado un **dataset propio**, obtenido a partir de imágenes capturadas con las cámaras de inspección.
