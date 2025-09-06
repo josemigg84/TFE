@@ -262,6 +262,8 @@ El modelo de segmentación está basado en la **arquitectura U-Net**, con un dat
    - **Métricas**: Accuracy, Binary IoU
 
 El mejor modelo alcanzó un IoU ≈ 0.98, demostrando la viabilidad de la solución en un entorno industrial.
+![Entrenamiento](/docs/entrenamiento.png)
+
 Para el entrenamiento se debe activar el entorno virtual `TFG` creado anteriormente y ejecutar el Script `entrenar.py` que se encuentra en el directorio:
 ~~~
 TFE/
