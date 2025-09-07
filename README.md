@@ -61,11 +61,11 @@ Aunque no es un requisito, para las pruebas se recomienda el uso de un contenedo
   
    **pyside2** (para la interfaz gráfica, instalado via conda-forge):
     ~~~
-   conda install -c conda-forge pyside2
+   conda install -c conda-forge pyside2=5.13.2
     ~~~
    **labelme** (instalado via pip):
     ~~~
-   pip install labelme
+   pip install labelme==5.2.1
     ~~~
 
 ### Paso 3. Instalación del entorno para data augmentation
@@ -80,11 +80,11 @@ Aunque no es un requisito, para las pruebas se recomienda el uso de un contenedo
 
    **albumentations** (instalado via pip):
     ~~~
-   pip install albumentations
+   pip install albumentations==2.0.8
     ~~~
    **opencv-python** (versión completa: necesaria para soporte gráfico, evitando instalar opencv-python-headless):
     ~~~
-   pip install opencv-python
+   pip install opencv-python==4.12.0.88
     ~~~
 
 ### Paso 4. Instalación de la base de datos MySQL con Docker
