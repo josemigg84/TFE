@@ -466,7 +466,7 @@ TFE/
 
 ## 7. Otras herramientas auxiliares
 En este punto se explica un script `linestrip_to_cordon.py` del que no se ha hablado en puntos anteriores. Para poder definir los puntos que forman parte de cada cordón en el fichero `settings.py` del analizador, se ha utilizado nuevamente la herramienta Labelme, creando un linestrip sobre los puntos deseados. Labelme permite hacer zoom sobre la imagen e ir guardando los puntos con bastante precisión. Una vez terminado un cordón, al darle a guardar, genera un `JSON` con los puntos que se han definido, pero estos no están en el formato adecuado para poder añadirlos al fichero de configuración del analizador.
-Para ello se debe renombrar el `JSON` con el nombre `labelme.JSON` y guardarlo en el mismo directorio que el script.
+Para ello se debe renombrar el `JSON` con el nombre `cordon.json` y guardarlo en el mismo directorio que el script.
 ~~~
 TFE/
 ├── Programs/
@@ -474,4 +474,4 @@ TFE/
 │   ├── ├──  "linestrip_to_cordon.py"/
 ~~~
 Para ejecutarlo no es necesario activar ningún entorno virtual concreto, se puede hacer con cualquiera o directamente con la versión de python instalada por defecto.
-El resultado es un fichero de texto que se genera en el mismo directorio con los puntos del cordón en forma de tuplas (x,y), preparado directamente para copiar y pegar en el `settings.py` del analizador.
+El resultado es un fichero de texto `puntos.txt` que se genera en el mismo directorio con los puntos del cordón en forma de tuplas (x,y), preparado directamente para copiar y pegar en el `settings.py` del analizador.
