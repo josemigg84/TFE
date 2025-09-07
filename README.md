@@ -474,4 +474,4 @@ TFE/
 │   ├── ├──  "linestrip_to_cordon.py"/
 ~~~
 Para ejecutarlo no es necesario activar ningún entorno virtual concreto, se puede hacer con cualquiera o directamente con la versión de python instalada por defecto.
-El resultado es un fichero de texto que se genera en el mismo directorio con los puntos del cordón en forma de tuplas (x,y), preparados directamente para copiar y pegar en el `settings.py` del analizador.
+El resultado es un fichero de texto que se genera en el mismo directorio con los puntos del cordón en forma de tuplas (x,y), preparado directamente para copiar y pegar en el `settings.py` del analizador.
