@@ -82,9 +82,9 @@ Aunque no es un requisito, para las pruebas se recomienda el uso de un contenedo
     ~~~
    pip install albumentations==2.0.8
     ~~~
-   **opencv-python** (versión completa: necesaria para soporte gráfico, evitando instalar opencv-python-headless):
+   **opencv-python-headless** (versión ligera de OpenCV, sin soporte gráfico para ventanas como cv2.imshow):
     ~~~
-   pip install opencv-python==4.12.0.88
+   pip install opencv-python-headless==4.12.0.88
     ~~~
 
 ### Paso 4. Instalación de la base de datos MySQL con Docker
