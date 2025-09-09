@@ -3,7 +3,7 @@
 import cv2
 import os
 
-# ajustar path de entrada y salida, y 
+# ajustar path de entrada y salida
 PATH_RECORTE_INTPUT = "images/entrenamiento/c1m1"
 PATH_RECORTE_OUTPUT = "images/recortes/c1m1"
 
@@ -48,18 +48,16 @@ def recortar(imagen, puntos, tamano, path_output, inicio):
     
     return contador
 
-
-
 # PARA RECORTAR IMAGENES DE UNA CARPETA 
 
 print(f"Carpeta de entrada: {PATH_RECORTE_INTPUT}")
 print("Archivos encontrados:")
 print(os.listdir(PATH_RECORTE_INTPUT))
 
-
+# recorre todas las imágenes dentro del directorio
 for filename in os.listdir(PATH_RECORTE_INTPUT):
     if not filename.lower().endswith(".jpg"):
-        continue  # ignorar archivos que no sean imágenes
+        continue  # no tener en cuenta archivos que no sean imágenes
 
     imagen_path = os.path.join(PATH_RECORTE_INTPUT, filename)
     imagen = cv2.imread(imagen_path)
@@ -68,6 +66,8 @@ for filename in os.listdir(PATH_RECORTE_INTPUT):
         print(f"No se pudo cargar: {imagen_path}")
         continue
 
+    # recorta la imagen de salida
     contador_salida = recortar(imagen, puntos_recortes_analisis[MODELO], TAMANO_RECORTE, PATH_RECORTE_OUTPUT, inicio)
+    # actualizar la variable inicio para nombrar el recorte
     inicio += contador_salida
 

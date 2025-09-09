@@ -30,17 +30,17 @@ def main():
             time.sleep(0.5)
             logger.log(f"Lectura PLC falló: {e}. Reintentando...")
             time.sleep(0.5)
-            plc.reconnect(delay_s=2.0)  # <- mismo objeto, estado limpio
+            plc.reconnect(delay_s=2.0)  # si fallo, reconectar
             time.sleep(0.5)
             continue
 
-        trigger = bool(data["trigger"])
-        pin = (data["pin"])
-        skid = (data["skid"])
-        modelo = int(data["modelo"])
-        fecha_app = data["fecha_app"]
+        trigger = bool(data["trigger"])        # disparo de las cámaras desde el PLC
+        pin = (data["pin"])                    # número de carrocería (pin)
+        skid = (data["skid"])                  # número de skid
+        modelo = int(data["modelo"])           # modelo de la carrocería
+        fecha_app = data["fecha_app"]          # fecha de aplicación
 
-        if trigger and not last_trigger:
+        if trigger and not last_trigger:       # solo entra si es un flanco
             logger.log("######## INICIO NUEVO PROCESO ########")
             logger.log(f"Número PIN desde PLC: {pin}")
             logger.log(f"Número SKID desde PLC: {skid}")
@@ -61,9 +61,9 @@ def main():
                 continue
 
             logger.log("Todas las capturas de imágen finalizadas.")
-            plc.escribir()                      #escribir confirmación en el PLC
+            plc.escribir()            #escribir confirmación en el PLC
 
-            #lógica de generar json
+            # Generar JSON
 
             id_fecha = fh.strftime("%y")   #sacar los dos últimos digitos, 2025 -> 25
             datetime_app = fecha_app.strftime("%Y-%m-%d %H:%M:%S") # --> fecha de aplicación, leída desde el PLC
@@ -75,15 +75,14 @@ def main():
             path_escribir = os.path.join("images", str(fh.year), f"{fh.month:02}", f"{fh.day:02}", str(pin))
             path_guardar = os.path.join(settings.PATH_GUARDAR_JSON, f"{pin}_in.json")
 
+            # crear y guardar fichero JSON
             fichero = JsonFichero(db_id, pin, skid, modelo, path_escribir, datetime_app, datetime_gra, path_guardar, logger)
             fichero.escribir()
 
             logger.log("Esperando nueva carrocería desde el PLC...")
 
-
         last_trigger = trigger
-        time.sleep(settings.DELAY)
-
+        time.sleep(settings.DELAY) # tiempo de retardo para no saturar la comunicación del PLC
 
 
 if __name__ == "__main__":

@@ -11,7 +11,7 @@ class Camara:
         self._ruta = ""
         self.res = False
 
-
+    # trata de comprobar si el puerto 554 está abierto
     @staticmethod
     def _puerto_abierto(host, port = 554, timeout = 1.5):
         try:
@@ -30,9 +30,9 @@ class Camara:
             self.res = False
             return False
 
-        cap = cv2.VideoCapture(self._rtsp_url)
-        ok, frame = cap.read()
-        cap.release()
+        cap = cv2.VideoCapture(self._rtsp_url)  # crear un objeto de captura
+        ok, frame = cap.read()      # lee el objeto, ok= resultado y frame=imagen capturada
+        cap.release()       # liberar el objeto de la captura
 
         if not ok or frame is None:
             self._logger.log(f"[Cam{self._num}] ERROR: No se pudo capturar imagen.")
@@ -44,7 +44,7 @@ class Camara:
         os.makedirs(carpeta, exist_ok=True)
         self._ruta = os.path.join(carpeta, f"c{self._num}_{pin}.jpg")
 
-        #guardar imagen
+        #guardar imagen en la ruta
         cv2.imwrite(self._ruta, frame)
         self._logger.log(f"[Cam{self._num}] Guardada imagen en: {self._ruta}")
         self.res = True

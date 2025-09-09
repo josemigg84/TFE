@@ -23,15 +23,15 @@ class JsonFichero:
 
         # Construir el diccionario de salida
         data_out = {
-            "db_id": self._db_id,
-            "pin": self._pin,
-            "skid": self._skid,
-            "modelo": self._modelo,
-            "cam1": self._cam1,
-            "cam2": self._cam2,
-            "path": path,
-            "datetime_aplicacion": self._datetime_aplicacion,
-            "datetime_grabacion": self._datetime_grabacion
+            "db_id": self._db_id,       # identificador
+            "pin": self._pin,           # número de carrocería
+            "skid": self._skid,         # número de skid
+            "modelo": self._modelo,     # modelo
+            "cam1": self._cam1,         # == True si se usa la cámara 1
+            "cam2": self._cam2,         # == True si se usa la cámara 2
+            "path": path,               # ruta
+            "datetime_aplicacion": self._datetime_aplicacion,   # fecha de aplicación de masilla
+            "datetime_grabacion": self._datetime_grabacion      # fecha de grabación de la imagen
         }
 
         # Asegurar carpeta y guardar JSON

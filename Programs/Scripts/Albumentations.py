@@ -20,17 +20,13 @@ OVERWRITE_ORIGINAL = False         # True para sobrescribirlo si ya existe
 os.makedirs(output_img_dir, exist_ok=True)
 os.makedirs(output_msk_dir, exist_ok=True)
 
-# Definir augmentations
+# Definir Data augmentations
 transform = a.Compose([
-    a.HorizontalFlip(p=0.5),
-    a.VerticalFlip(p=0.3),
-    a.RandomRotate90(p=0.5),
-    a.ShiftScaleRotate(shift_limit=0.1, scale_limit=0.2, rotate_limit=15,
-                       border_mode=cv2.BORDER_REFLECT, p=0.7),
-    a.RandomBrightnessContrast(p=0.3),
-],
-    additional_targets={'mask': 'mask'}
-)
+    a.HorizontalFlip(p=0.4),    # Voltear la imagen horizontalmente con probabilidad = 40%
+    a.VerticalFlip(p=0.4),      # Voltear la imagen horizontalmente con probabilidad = 40%
+    a.RandomRotate90(p=0.3),    # Rotar la imagen cada 90° con probabilidad = 30%
+    a.ShiftScaleRotate(shift_limit=0.1, scale_limit=0.2, rotate_limit=15, border_mode=cv2.BORDER_REFLECT, p=0.6),  # Aplicar traslación, escalado y rotación con probabilidad = 60%
+    a.RandomBrightnessContrast(p=0.5),], additional_targets={'mask': 'mask'})  # Ajustar el brillo y contraste con probabilidad = 50%
 
 # Obtener archivos por nombre desde input_img_dir
 image_files = sorted([f for f in os.listdir(input_img_dir) if f.endswith(".png")])
@@ -39,7 +35,7 @@ image_files = sorted([f for f in os.listdir(input_img_dir) if f.endswith(".png")
 used_names = set()
 
 # Generar nombre aleatorio de 6 dígitos
-def unique_random_name():
+def generar_nombre_aleatorio():
     while True:
         name = f"{random.randint(100000, 999999)}.png"
         if name not in used_names:
@@ -62,7 +58,7 @@ for file_name in image_files:
 
     # Guardar el original (opcional)
     if SAVE_ORIGINAL:
-        nombre_aleatorio = unique_random_name()
+        nombre_aleatorio = generar_nombre_aleatorio() #también se renombra aleatorio
         img_salida = os.path.join(output_img_dir, nombre_aleatorio)
         msk_salida = os.path.join(output_msk_dir, nombre_aleatorio)
 
@@ -76,7 +72,7 @@ for file_name in image_files:
         aug_img = augmented['image']
         aug_msk = augmented['mask']
 
-        nombre_aleatorio = unique_random_name()
+        nombre_aleatorio = generar_nombre_aleatorio()
         cv2.imwrite(os.path.join(output_img_dir, nombre_aleatorio), aug_img)
         cv2.imwrite(os.path.join(output_msk_dir, nombre_aleatorio), aug_msk)
 

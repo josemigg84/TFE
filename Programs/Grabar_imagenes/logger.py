@@ -18,10 +18,11 @@ class Logger:
         log_folder = os.path.join(self._base_dir, str(fecha.year), f"{fecha.month:02}", f"{fecha.day:02}")
         os.makedirs(log_folder, exist_ok=True)
 
+        # se crea un fichero log para grabar imágenes
         log_file = os.path.join(log_folder, f"grabar_imagenes_log_{fecha_str}.txt")
         linea = f"{timestamp} - {mensaje}"
 
-        with self._lock:            #protección para evitar que varios hilos escriban a la vez en el log o en la consola
+        with self._lock:            # Condición de carrera: protección para evitar que varios hilos escriban a la vez en el log o en la consola
             if console:
                 print(linea)
             with open(log_file, "a", encoding="utf-8") as f:
