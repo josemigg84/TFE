@@ -75,7 +75,7 @@ class PLCClient:
         hh = get_byte(data, settings.APP_DATETIME_OFFSET+3)     # obtiene la hora como byte desde el PLC
         mi = get_byte(data, settings.APP_DATETIME_OFFSET+4)     # obtiene el minuto como byte desde el PLC
         ss = get_byte(data, settings.APP_DATETIME_OFFSET+5)     # obtiene el segundo como byte desde el PLC
-        fecha_app = dt.datetime(int(yy)+2000, int(mm), int(dd), int(hh), int(mi), int(ss))
+        fecha_app = dt.datetime(int(yy)+2000, int(mm), int(dd), int(hh), int(mi), int(ss))      # construir la fecha con los datos anteriores
 
 
         return {"trigger": trigger, "pin": pin, "skid": skid, "modelo": modelo, "fecha_app": fecha_app}
