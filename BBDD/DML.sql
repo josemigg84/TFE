@@ -1,4 +1,5 @@
 /* DDL - inserciones de valores fijos de configuracion para camaras y cordones inspeccionados*/
+
 insert into Camara (nombre) VALUES
 ('Camara1_Izq'),
 ('Camara2_Der');

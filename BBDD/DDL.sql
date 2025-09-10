@@ -1,4 +1,4 @@
-use TFG;
+/* Si es necesario usar el Schema creado, ejemplo: "use TFG;" */
 
 
 /* CREACION DE TABLAS */
