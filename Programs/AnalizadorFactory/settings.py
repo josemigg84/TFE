@@ -31,7 +31,7 @@ COLOR_VENTANA = (199, 67, 117)
 COLOR_CORDON = (255, 0, 0)
 COLOR_AMARILLO = (0, 255, 255)
 
-MODELOS = {
+MODELOS = { # diccionario de modelos externo (PLC): interno (programa)
     13: 1,
     14: 1,
     23: 2,

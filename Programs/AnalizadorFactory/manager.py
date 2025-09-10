@@ -4,6 +4,8 @@ class AnalisisManager:
         self.analizador = factoria.crear(config, path_img, logger, fichero)
         self.logger = logger
 
+    # ejecuta la secuencia completa del analisis
+    # los métodos localizar(), modificar(), analizar() y finalizar () son abstractoa en el analizadorBase y deben implementarse en cada analizador concreto
     def ejecutar(self):
         try:
             self.analizador.localizar()

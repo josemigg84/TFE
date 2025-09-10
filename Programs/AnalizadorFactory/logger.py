@@ -16,7 +16,7 @@ class Logger:
         log_folder = os.path.join(self.base_dir, str(fecha.year), f"{fecha.month:02}", f"{fecha.day:02}")
         os.makedirs(log_folder, exist_ok=True)
 
-        log_file = os.path.join(log_folder, f"analizador_log_{fecha_str}.txt")
+        log_file = os.path.join(log_folder, f"analizador_log_{fecha_str}.txt") # crear fichero log de analizador
         linea = f"{timestamp} - {mensaje}"
 
         if console:
