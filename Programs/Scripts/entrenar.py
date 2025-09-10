@@ -5,7 +5,7 @@ import numpy as np
 import cv2
 import tensorflow as tf
 from tensorflow.keras import layers, models
-from tensorflow.keras.callbacks import ModelCheckpoint, LambdaCallback, TensorBoard
+from tensorflow.keras.callbacks import ModelCheckpoint, TensorBoard
 from glob import glob
 
 start = time.time()
