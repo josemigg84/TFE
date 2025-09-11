@@ -81,7 +81,7 @@ Aunque no es un requisito, para las pruebas se recomienda el uso de un contenedo
 
    **albumentations** (instalado via pip):
     ~~~
-   pip install albumentations==2.0.8
+   pip install albumentations==1.4.18
     ~~~
    **opencv-python-headless** (versión ligera de OpenCV, sin soporte gráfico para ventanas como cv2.imshow):
     ~~~
